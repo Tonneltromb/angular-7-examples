@@ -1,0 +1,7 @@
+<div class="examples__side-menu">
+  <div
+    class="examples__side-menu__item"
+    *ngFor="let item of navItems" (click)="onNavigationItemClickHandler(item.path)">
+    <span>{{item.title}}</span>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@import '../../examples.colors.css';
+
+.examples__side-menu {
+  width: 100%;
+  height: 100%;
+  background-color: var(--side-menu-background-color);
+}
+.examples__side-menu__item {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.examples__side-menu__item:hover {
+  background-color: var(--side-menu-background-color);
+}
+

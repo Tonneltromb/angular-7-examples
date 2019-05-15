@@ -2,7 +2,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-examples',
-  template: `<h1>Examples</h1>`,
+  templateUrl: './examples.component.html',
+  styleUrls: ['./examples.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class ExamplesComponent {
