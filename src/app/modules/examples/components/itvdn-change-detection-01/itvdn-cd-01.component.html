@@ -1,0 +1,15 @@
+<div class="container">
+  <app-card [name]="'root'">
+    <app-card [name]="'child_1'"></app-card>
+    <app-card [name]="'child_2'">
+      <app-card [name]="'child_2_1'"></app-card>
+      <app-card [name]="'child_2_2'"></app-card>
+    </app-card>
+  </app-card>
+  <div class="container__buttons">
+    <button (click)="onClickHandler()">click</button>
+    <button (click)="onTimerStartClickHandler()">timer</button>
+    <button (click)="onAjaxSendClickHandler()">ajax</button>
+  </div>
+</div>
+

@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ExamplesComponent} from './examples.component';
 import {ExamplesRoute} from './entities/Route';
-import {ExampleOneTestComponent} from './components/example-one-test/example-one-test.component';
+import {ITVDNChangeDetection01Component} from './components/itvdn-change-detection-01/itvdn-cd-01.component';
 import {ExampleTwoTestComponent} from './components/example-two-test/example-two-test.component';
 
 export const CHILDREN: ExamplesRoute[] = [
-  {title: 'Example_1', path: 'example_1', component: ExampleOneTestComponent},
+  {title: 'ITVDN - Отслеживание изменений 01', path: 'itvdn-cd-01', component: ITVDNChangeDetection01Component},
   {title: 'Example_2', path: 'example_2', component: ExampleTwoTestComponent}
 ];
 
