@@ -8,8 +8,13 @@
   padding: 20px;
 }
 
+.container__header {
+  width: 80%;
+  margin: 10px 0;
+}
+
 .container__buttons {
-  width: 200px;
+  width: 50%;
   margin-top: 10px;
   display: flex;
   justify-content: space-around;

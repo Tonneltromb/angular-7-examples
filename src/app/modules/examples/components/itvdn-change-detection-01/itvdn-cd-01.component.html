@@ -1,4 +1,5 @@
 <div class="container">
+  <h3 class="container__header">В данном примере демонстрируется срабатывание change detector'а при действиях пользователя</h3>
   <app-card [name]="'root'">
     <app-card [name]="'child_1'"></app-card>
     <app-card [name]="'child_2'">
@@ -8,7 +9,8 @@
   </app-card>
   <div class="container__buttons">
     <button (click)="onClickHandler()">click</button>
-    <button (click)="onTimerStartClickHandler()">timer</button>
+    <button (click)="onStartIntervalClickHandler()">timer start</button>
+    <button (click)="onStopIntervalClickHandler()">timer stop</button>
     <button (click)="onAjaxSendClickHandler()">ajax</button>
   </div>
 </div>

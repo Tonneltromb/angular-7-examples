@@ -9,7 +9,7 @@ import axios from 'axios';
   encapsulation: ViewEncapsulation.None
 })
 export class ITVDNChangeDetection01Component implements OnInit {
-
+  private intervalId: number;
   constructor() { }
 
   ngOnInit() {
@@ -19,14 +19,22 @@ export class ITVDNChangeDetection01Component implements OnInit {
     console.log('was clicked');
   }
 
-  onTimerStartClickHandler() {
-    setInterval(() => {
+  onStartIntervalClickHandler() {
+    this.intervalId = setInterval(() => {
     }, 2000);
+  }
+  onStopIntervalClickHandler() {
+    clearInterval(this.intervalId);
   }
 
   onAjaxSendClickHandler() {
-    axios.get('http://localhost:4200')
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+    // axios.get('http://localhost:4200')
+    //   .then(r => console.log(r))
+    //   .catch(e => console.log(e));
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:4200', true);
+    xhr.addEventListener('load', () => console.log('load'));
+    xhr.addEventListener('error', () => console.log('error'));
+    xhr.send();
   }
 }
