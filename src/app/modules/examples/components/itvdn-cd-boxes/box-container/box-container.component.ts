@@ -1,54 +1,62 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewEncapsulation} from '@angular/core';
+
+import {BoxComponent} from '../box/box.component';
 
 @Component({
   selector: 'app-box-container',
   templateUrl: './box-container.component.html',
   styleUrls: ['./box-container.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class BoxContainerComponent implements OnInit {
+export class BoxContainerComponent implements OnInit, AfterViewInit {
 
-  currentId: number = null;
   offsetX: number;
   offsetY: number;
   boxes = [];
-  size = 1000;
+  size = 2000;
+  currentBox: BoxComponent = null;
 
-  constructor() {
-  }
+  constructor(private chD: ChangeDetectorRef) {}
 
   ngOnInit() {
     for (let i = 0; i < this.size; i++) {
       const randX = Math.floor((Math.random() * 800) + 1);
       const randY = Math.floor((Math.random() * 800) + 1);
-      this.boxes[i] = {x: randX, y: randY, num: i};
+      this.boxes[i] = {x: randX, y: randY};
     }
+  }
+
+  ngAfterViewInit() {
+    this.chD.detach();
   }
 
   onMouseMove(event) {
     event.preventDefault();
-    if (this.currentId !== null) {
-      this.updateBox(this.currentId, event.clientX + this.offsetX, event.clientY + this.offsetY);
+    if (this.currentBox !== null) {
+      this.updateBox(this.currentBox, event.clientX + this.offsetX, event.clientY + this.offsetY);
     }
   }
 
   onMouseUp(event) {
-    this.currentId = null;
+    if (this.currentBox) {
+      this.currentBox.selected = false;
+      this.currentBox.update();
+    }
+    this.currentBox = null;
   }
-
   onMouseDown(event) {
-    const id = event.target.getAttribute('data-my-id');
-    if (id !== null) {
-      const box = this.boxes[id];
+    const box = event.target.BoxComponent as BoxComponent;
+    if (box) {
       this.offsetX = box.x - event.clientX;
       this.offsetY = box.y - event.clientY;
-      this.currentId = id;
+      this.currentBox = box;
+      box.selected = true;
+      box.update();
     }
   }
-
-  updateBox(id: number, x: number, y: number) {
-    const box = this.boxes[id];
+  updateBox(box: BoxComponent, x: number, y: number) {
     box.x = x;
     box.y = y;
+    box.update();
   }
 }
