@@ -1,0 +1,27 @@
+.user-list {
+  padding: 10px;
+}
+
+.user-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 15px;
+  button {
+    align-self: center;
+    margin-right: 15px;
+    background-color: lightblue;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid scale_color(lightblue, $lightness: -20%);
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 3px 0 scale_color(lightblue, $lightness: -45%);
+    }
+  }
+}

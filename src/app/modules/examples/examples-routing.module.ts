@@ -9,7 +9,7 @@ import {BoxContainerComponent} from './components/itvdn-cd-boxes/box-container/b
 export const CHILDREN: ExamplesRoute[] = [
   {title: 'ITVDN - Отслеживание изменений 01', path: 'itvdn-cd-01', component: ITVDNChangeDetection01Component},
   {title: 'ITVDN - Квадратики', path: 'itvdn-cd-boxes', component: BoxContainerComponent},
-  {title: 'Change detection', path: 'example_2', component: ChangeDetectionComponent}
+  {title: 'Change detection', path: 'change-detection', component: ChangeDetectionComponent}
 ];
 
 const examplesRoutes: Routes = [

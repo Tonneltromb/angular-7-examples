@@ -5,7 +5,7 @@ import {BoxComponent} from '../box/box.component';
 @Component({
   selector: 'app-box-container',
   templateUrl: './box-container.component.html',
-  styleUrls: ['./box-container.component.css'],
+  styleUrls: ['./box-container.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class BoxContainerComponent implements OnInit, AfterViewInit {

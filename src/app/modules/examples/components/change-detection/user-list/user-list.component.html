@@ -1,3 +1,13 @@
-<p>
-  user-list works!
-</p>
+<div class="user-list">
+  <div class="user-wrapper"
+       *ngFor="let user of userStore.users; let index = index">
+    <app-cd-user
+      [name]="user.name"
+      [age]="user.age"
+      [email]="user.email"></app-cd-user>
+    <div class="buttons">
+      <button (click)="userStore.changeName(user)">change name</button>
+      <button (click)="userStore.changeUser(index, user)">change user</button>
+    </div>
+  </div>
+</div>

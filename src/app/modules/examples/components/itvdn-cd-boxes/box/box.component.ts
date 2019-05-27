@@ -3,7 +3,7 @@ import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnInit, 
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
-  styleUrls: ['./box.component.css'],
+  styleUrls: ['./box.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class BoxComponent implements OnInit, AfterViewInit {

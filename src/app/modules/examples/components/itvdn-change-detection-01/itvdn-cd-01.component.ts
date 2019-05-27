@@ -5,7 +5,7 @@ import axios from 'axios';
 @Component({
   selector: 'app-example-one-test',
   templateUrl: './itvdn-cd-01.component.html',
-  styleUrls: ['./itvdn-cd-01.component.css'],
+  styleUrls: ['./itvdn-cd-01.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ITVDNChangeDetection01Component implements OnInit {

@@ -10,6 +10,7 @@ import {BoxComponent} from './components/itvdn-cd-boxes/box/box.component';
 import { BoxContainerComponent } from './components/itvdn-cd-boxes/box-container/box-container.component';
 import { UserComponent } from './components/change-detection/user/user.component';
 import { UserListComponent } from './components/change-detection/user-list/user-list.component';
+import {UserStore} from './components/change-detection/store/user.store';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserListComponent } from './components/change-detection/user-list/user-
   ],
   imports: [
     CommonModule,
-    ExamplesRoutingModule
-  ]
+    ExamplesRoutingModule,
+  ],
+  providers: [UserStore]
 })
 export class ExamplesModule {}
