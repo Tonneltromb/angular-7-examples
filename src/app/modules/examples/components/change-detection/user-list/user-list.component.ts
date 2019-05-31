@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, DoCheck, OnInit, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, OnInit, ViewEncapsulation} from '@angular/core';
 import {UserStore} from '../store/user.store';
 
 @Component({
@@ -10,12 +10,26 @@ import {UserStore} from '../store/user.store';
 })
 export class UserListComponent implements OnInit, DoCheck {
   static checksCount = 0;
-  constructor(public userStore: UserStore) { }
+  public counter: number;
+  constructor(public userStore: UserStore,
+              private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
   ngDoCheck(): void {
-    console.log('[UserListComponent] ', ++UserListComponent.checksCount);
+    this.counter = ++UserListComponent.checksCount;
+    console.log('[UserListComponent] ', UserListComponent.checksCount);
   }
 
+  onDetachClickHandler() {
+    this.cd.detach();
+  }
+
+  onDetectChangesClickHandler() {
+    this.cd.detectChanges();
+  }
+
+  onMarkForCheckClickHandler() {
+    this.cd.markForCheck();
+  }
 }

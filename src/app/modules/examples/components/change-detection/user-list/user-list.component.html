@@ -1,13 +1,28 @@
 <div class="user-list">
+  <h3>Count: <i>{{counter}}</i></h3>
+  <div class="buttons">
+    <button class="button"
+            (click)="onDetachClickHandler()">Detach</button>
+    <button class="button"
+            (click)="onDetectChangesClickHandler()">Detect changes</button>
+    <button class="button"
+            (click)="onMarkForCheckClickHandler()">Mark for check</button>
+
+  </div>
   <div class="user-wrapper"
        *ngFor="let user of userStore.users; let index = index">
     <app-cd-user
       [name]="user.name"
+      [version]="user.version"
       [age]="user.age"
       [email]="user.email"></app-cd-user>
     <div class="buttons">
-      <button (click)="userStore.changeName(user)">change name</button>
-      <button (click)="userStore.changeUser(index, user)">change user</button>
+      <button class="button"
+              (click)="userStore.changeVersion(user)">change version
+      </button>
+      <button class="button"
+              (click)="userStore.changeUser(index, user)">change user
+      </button>
     </div>
   </div>
 </div>

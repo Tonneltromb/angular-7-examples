@@ -1,8 +1,25 @@
 <div class="user">
   <div>
-    <h3>{{name}}</h3>
+    <h3>{{name}} {{version}}</h3>
     <h3>{{age}}</h3>
     <h3>{{email}}</h3>
   </div>
-  <h4>{{count}}</h4>
+  <div class="buttons">
+    <button class="button"
+            (click)="onDetachClickHandler()">Detach
+    </button>
+    <button class="button"
+            (click)="onReattachClickHandler()">Reattach
+    </button>
+    <button class="button"
+            (click)="onDetectChangesClickHandler()">Detect changes
+    </button>
+    <button class="button"
+            (click)="onMarkForCheckClickHandler()">Mark for check
+    </button>
+    <div>
+      <h4>Counter: <i>{{count}}</i></h4>
+      <h4>Detached <i>{{detached}}</i></h4>
+    </div>
+  </div>
 </div>
