@@ -13,6 +13,10 @@ export class UserStore {
     user.version = user.version + 1;
   }
 
+  changeName(user: User, newName) {
+    user.name = newName;
+  }
+
   changeUser(index, user: User) {
     this.users[index] = {
       name: 'new ' + user.name,

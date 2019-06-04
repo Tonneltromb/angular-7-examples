@@ -5,7 +5,7 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Input, O
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserComponent implements OnInit, DoCheck {
   static checksCount = 0;
