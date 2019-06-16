@@ -1,8 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {HomePageComponent} from './core/components/home-page/home-page.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/examples', pathMatch: 'full'},
+  {path: '', component: HomePageComponent},
+  {path: 'examples', loadChildren: './modules/examples/examples.module#ExamplesModule'},
 ];
 
 @NgModule({

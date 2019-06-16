@@ -1,5 +1,5 @@
 import {Route} from '@angular/router';
 
-export interface ExamplesRoute extends Route {
+export default interface TitledRoute extends Route {
   title: string;
 }

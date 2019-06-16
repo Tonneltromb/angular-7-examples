@@ -1,0 +1,9 @@
+<div class="examples__side-menu">
+  <div class="examples__side-menu__item"
+       *ngFor="let item of navItems | slice:1"
+       routerLink="{{item.path}}"
+       routerLinkActive="active"
+  >
+    <span>{{item.title}}</span>
+  </div>
+</div>

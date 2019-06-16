@@ -1,4 +1,4 @@
-@import '../../examples.colors.scss';
+@import '../../../examples.colors';
 
 .examples__side-menu {
   width: 100%;
@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 .examples__side-menu__item:hover {
+  background-color: var(--side-menu-background-color);
+}
+
+.active {
   background-color: var(--side-menu-background-color);
 }
 
