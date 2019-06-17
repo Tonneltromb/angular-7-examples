@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-import {CHILDREN} from '../../child-routes';
+import {CHILDREN} from '../../../examples-routing.module';
 import TitledRoute from '../../interfaces/TitledRoute';
 
 @Component({
