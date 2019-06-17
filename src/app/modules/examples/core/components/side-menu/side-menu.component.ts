@@ -2,6 +2,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 import {CHILDREN} from '../../../examples-routing.module';
 import TitledRoute from '../../interfaces/TitledRoute';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-examples-side-menu',
@@ -11,4 +12,10 @@ import TitledRoute from '../../interfaces/TitledRoute';
 })
 export class SideMenuComponent {
   navItems: TitledRoute[] = CHILDREN;
+
+  constructor(private router: Router) {}
+
+  onBackToMainPageClickHandler() {
+    this.router.navigate(['/']);
+  }
 }
