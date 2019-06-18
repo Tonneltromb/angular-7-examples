@@ -10,6 +10,7 @@ import {UserComponent} from './components/change-detection/user/user.component';
 import {UserListComponent} from './components/change-detection/user-list/user-list.component';
 import {UserStore} from './components/change-detection/store/user.store';
 import {ExamplesComponent} from './examples.component';
+import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {ExamplesComponent} from './examples.component';
     CardComponent,
     ChangeDetectionComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    ArrayFilterPipe
   ],
   imports: [
     CommonModule,

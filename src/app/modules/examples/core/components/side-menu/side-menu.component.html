@@ -1,10 +1,19 @@
-<button class="examples__side-menu__button" (click)="onBackToMainPageClickHandler()">НА ГЛАВНУЮ</button>
+<button class="examples__side-menu__button"
+        (click)="onBackToMainPageClickHandler()"
+>
+  НА ГЛАВНУЮ
+</button>
 <div class="examples__side-menu">
-  <div class="examples__side-menu__item"
-       *ngFor="let item of navItems | slice:1"
-       routerLink="{{item.path}}"
-       routerLinkActive="active"
+  <div *ngFor="let group of routeTags"
+       class="examples__side-menu__item-group"
   >
-    <span>{{item.title}}</span>
+    <h3> -- {{group}}</h3>
+    <div class="examples__side-menu__item"
+         *ngFor="let item of navItems | arrayFilter:filterItemsCallback:group"
+         routerLink="{{item.path}}"
+         routerLinkActive="active"
+    >
+      <span>{{item.title}}</span>
+    </div>
   </div>
 </div>

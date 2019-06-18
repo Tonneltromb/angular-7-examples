@@ -1,8 +1,9 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 import {CHILDREN} from '../../../examples-routing.module';
-import TitledRoute from '../../interfaces/TitledRoute';
 import {Router} from '@angular/router';
+import {RouteGroupTag} from '../../RouteGroupTag';
+import ExamplesRoute from '../../interfaces/ExamplesRoute';
 
 @Component({
   selector: 'app-examples-side-menu',
@@ -11,11 +12,13 @@ import {Router} from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class SideMenuComponent {
-  navItems: TitledRoute[] = CHILDREN;
-
+  navItems: ExamplesRoute[] = CHILDREN;
+  routeTags: RouteGroupTag[] = RouteGroupTag.values();
   constructor(private router: Router) {}
-
   onBackToMainPageClickHandler() {
     this.router.navigate(['/']);
+  }
+  filterItemsCallback(item: ExamplesRoute, group: RouteGroupTag) {
+    return item.tag === group;
   }
 }
