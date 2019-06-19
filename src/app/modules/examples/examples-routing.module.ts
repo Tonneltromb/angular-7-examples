@@ -32,6 +32,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.CHANGE_DETECTION,
     path: 'change-detection',
     component: ChangeDetectionComponent
+  },
+  {
+    title: 'Services and DI',
+    tag: RouteGroupTag.SERVICES_AND_DI,
+    path: 'services',
+    loadChildren: './modules/services/services.module#ServicesModule'
   }
 ];
 
