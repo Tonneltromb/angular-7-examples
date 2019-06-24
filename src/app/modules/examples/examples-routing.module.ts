@@ -6,6 +6,7 @@ import {ITVDNChangeDetection01Component} from './components/itvdn-change-detecti
 import {ChangeDetectionComponent} from './components/change-detection/change-detection.component';
 import {RouteGroupTag} from './core/RouteGroupTag';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
+import {PipesComponent} from './components/pipes/pipes.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -38,6 +39,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.SERVICES_AND_DI,
     path: 'services',
     loadChildren: './modules/services/services.module#ServicesModule'
+  },
+  {
+    title: 'Pipes',
+    tag: RouteGroupTag.PIPES,
+    path: 'pipes',
+    component: PipesComponent
   }
 ];
 

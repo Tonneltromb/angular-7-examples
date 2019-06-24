@@ -11,6 +11,7 @@ import {UserListComponent} from './components/change-detection/user-list/user-li
 import {UserStore} from './components/change-detection/store/user.store';
 import {ExamplesComponent} from './examples.component';
 import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
+import {PipesComponent} from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
     ChangeDetectionComponent,
     UserComponent,
     UserListComponent,
+    PipesComponent,
     ArrayFilterPipe
   ],
   imports: [
