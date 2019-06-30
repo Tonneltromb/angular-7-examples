@@ -7,6 +7,7 @@ import {ChangeDetectionComponent} from './components/change-detection/change-det
 import {RouteGroupTag} from './core/RouteGroupTag';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {PipesComponent} from './components/pipes/pipes.component';
+import {FormsComponent} from './components/forms/forms.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -45,6 +46,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.PIPES,
     path: 'pipes',
     component: PipesComponent
+  },
+  {
+    title: 'Forms',
+    tag: RouteGroupTag.FORMS,
+    path: 'forms',
+    component: FormsComponent
   }
 ];
 

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-h1, h2, h3, div, p, button{
+h1, h2, h3, div, p, button, main, section, header, form, input, select, option {
   box-sizing: border-box;
   outline: none;
 }
@@ -28,7 +28,7 @@ h1, h2, h3, div, p, button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  overflow-x: auto;
 }
 
 .buttons {

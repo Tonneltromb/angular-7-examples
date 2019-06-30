@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {ExamplesRoutingModule} from './examples-routing.module';
 import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 import {SideMenuComponent} from './core/components/side-menu/side-menu.component';
 import {ITVDNChangeDetection01Component} from './components/itvdn-change-detection-01/itvdn-cd-01.component';
@@ -12,6 +13,7 @@ import {UserStore} from './components/change-detection/store/user.store';
 import {ExamplesComponent} from './examples.component';
 import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 import {PipesComponent} from './components/pipes/pipes.component';
+import {FormsComponent} from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import {PipesComponent} from './components/pipes/pipes.component';
     UserComponent,
     UserListComponent,
     PipesComponent,
+    FormsComponent,
     ArrayFilterPipe
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ExamplesRoutingModule,
   ],
   providers: [UserStore]
