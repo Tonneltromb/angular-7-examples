@@ -4,7 +4,11 @@
   </header>
   <main>
     <section>
-      <h3>[TD] Form example</h3>
+      <h3>[TD] Form example
+        <div [ngStyle]="{width: '20px', height: '20px'}">
+          <app-svg-arrow-up></app-svg-arrow-up>
+        </div>
+      </h3>
       <form (ngSubmit)="registerUser(userForm_1)" #userForm_1='ngForm'>
         <label>
           <input name="name" placeholder="enter name" ngModel>

@@ -14,6 +14,7 @@ import {ExamplesComponent} from './examples.component';
 import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {FormsComponent} from './components/forms/forms.component';
+import {SvgArrowUpComponent} from '../../common/svg/svg.arrow-up.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsComponent} from './components/forms/forms.component';
     UserListComponent,
     PipesComponent,
     FormsComponent,
-    ArrayFilterPipe
+    ArrayFilterPipe,
+    SvgArrowUpComponent
   ],
   imports: [
     CommonModule,
