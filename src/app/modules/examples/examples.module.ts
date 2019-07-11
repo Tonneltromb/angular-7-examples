@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {ExamplesRoutingModule} from './examples-routing.module';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {SideMenuComponent} from './core/components/side-menu/side-menu.component';
 import {ITVDNChangeDetection01Component} from './components/itvdn-change-detection-01/itvdn-cd-01.component';
@@ -15,6 +15,7 @@ import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {FormsComponent} from './components/forms/forms.component';
 import {SvgArrowUpComponent} from '../../common/svg/svg.arrow-up.component';
+import {RegexpComponent} from './components/regex/regexp.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,13 @@ import {SvgArrowUpComponent} from '../../common/svg/svg.arrow-up.component';
     PipesComponent,
     FormsComponent,
     ArrayFilterPipe,
-    SvgArrowUpComponent
+    SvgArrowUpComponent,
+    RegexpComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     ExamplesRoutingModule,
   ],
   providers: [UserStore]

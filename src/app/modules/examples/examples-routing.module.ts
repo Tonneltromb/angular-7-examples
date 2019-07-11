@@ -5,9 +5,10 @@ import {ExamplesComponent} from './examples.component';
 import {ITVDNChangeDetection01Component} from './components/itvdn-change-detection-01/itvdn-cd-01.component';
 import {ChangeDetectionComponent} from './components/change-detection/change-detection.component';
 import {RouteGroupTag} from './core/RouteGroupTag';
-import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {FormsComponent} from './components/forms/forms.component';
+import {RegexpComponent} from './components/regex/regexp.component';
+import ExamplesRoute from './core/interfaces/ExamplesRoute';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -52,6 +53,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.FORMS,
     path: 'forms',
     component: FormsComponent
+  },
+  {
+    title: 'Regexp',
+    tag: RouteGroupTag.REGEXP,
+    path: 'regexp',
+    component: RegexpComponent
   }
 ];
 

@@ -3,12 +3,14 @@ export class RouteGroupTag {
   static SERVICES_AND_DI = 'Сервисы и DI';
   static PIPES = 'Пайпы';
   static FORMS = 'Работа с формами';
+  static REGEXP = 'Регулярные выражения';
   static values = () => {
     return [
       RouteGroupTag.CHANGE_DETECTION,
       RouteGroupTag.SERVICES_AND_DI,
       RouteGroupTag.PIPES,
-      RouteGroupTag.FORMS
+      RouteGroupTag.FORMS,
+      RouteGroupTag.REGEXP,
     ];
   }
 }

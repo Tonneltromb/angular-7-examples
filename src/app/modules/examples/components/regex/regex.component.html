@@ -1,0 +1,27 @@
+<div class="container">
+  <header>
+    <h2>Примеры форм</h2>
+  </header>
+  <main>
+    <section>
+      <h3>Пример #1</h3>
+      <div class="info">
+        Допустимые значения:<br/>
+        <ul [ngStyle]="{margin: '0 25px'}">
+          <li>0</li>
+          <li>числа, не начинающиеся с 0 (100 / 100.12 / <del>011</del>)</li>
+          <li>числа, начинающиеся с 0, но имеющие 0 единственным числом перед дробным разделителем (0.11 / 0.00 / 0.10)</li>
+        </ul>
+          <b>Все числа с плавающей точкой должны иметь не более двух знаков в дробной части</b>
+      </div>
+      <form>
+        <label>
+          <input [formControl]="numberCheck"
+                 name="name"
+                 placeholder="enter name"
+          >
+        </label>
+      </form>
+    </section>
+  </main>
+</div>
