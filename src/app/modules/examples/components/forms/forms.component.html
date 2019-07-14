@@ -1,180 +1,175 @@
 <div class="container">
-  <header>
-    <h2>Примеры форм</h2>
-  </header>
-  <main>
-    <section>
-      <h3>[TD] Form example
-        <div [ngStyle]="{width: '20px', height: '20px'}">
-          <app-svg-arrow-up></app-svg-arrow-up>
-        </div>
-      </h3>
-      <form (ngSubmit)="registerUser(userForm_1)" #userForm_1='ngForm'>
-        <label>
-          <input name="name" placeholder="enter name" ngModel>
-        </label>
-        <label>
-          <input name="age" placeholder="enter age" ngModel>
-        </label>
-        <button type="submit" class="button-submit">submit</button>
-      </form>
-    </section>
-    <section>
-      <h3>[TD] Form validation (simple)</h3>
-      <form (ngSubmit)="registerUser(userForm_2)" #userForm_2='ngForm'>
-        <label>
-          <input
-            name="name"
-            placeholder="enter name"
-            ngModel
-            #uf_2_name="ngModel"
-            required
-          />
-          <span *ngIf="!uf_2_name.valid && uf_2_name.touched"
-                class="error-message"
-          >
+  <section>
+    <h3>[TD] Form example
+      <div [ngStyle]="{width: '20px', height: '20px'}">
+        <app-svg-arrow-up></app-svg-arrow-up>
+      </div>
+    </h3>
+    <form (ngSubmit)="registerUser(userForm_1)" #userForm_1='ngForm'>
+      <label>
+        <input name="name" placeholder="enter name" ngModel>
+      </label>
+      <label>
+        <input name="age" placeholder="enter age" ngModel>
+      </label>
+      <button type="submit" class="button-submit">submit</button>
+    </form>
+  </section>
+  <section>
+    <h3>[TD] Form validation (simple)</h3>
+    <form (ngSubmit)="registerUser(userForm_2)" #userForm_2='ngForm'>
+      <label>
+        <input
+          name="name"
+          placeholder="enter name"
+          ngModel
+          #uf_2_name="ngModel"
+          required
+        />
+        <span *ngIf="!uf_2_name.valid && uf_2_name.touched"
+              class="error-message"
+        >
           Name must not be empty
         </span>
-        </label>
-        <label>
-          <input
-            name="age"
-            placeholder="enter age"
-            ngModel
-            #uf_2_age="ngModel"
-            required
-          >
-          <span *ngIf="!uf_2_age.valid && uf_2_age.touched"
-                class="error-message"
-          >
+      </label>
+      <label>
+        <input
+          name="age"
+          placeholder="enter age"
+          ngModel
+          #uf_2_age="ngModel"
+          required
+        >
+        <span *ngIf="!uf_2_age.valid && uf_2_age.touched"
+              class="error-message"
+        >
           Name must not be empty
         </span>
-        </label>
-        <button
-          type="submit"
-          class="button-submit"
-          [disabled]="!userForm_2.valid"
+      </label>
+      <button
+        type="submit"
+        class="button-submit"
+        [disabled]="!userForm_2.valid"
+      >
+        submit
+      </button>
+    </form>
+  </section>
+  <section>
+    <h3>[TD] Setting default values</h3>
+    <form (ngSubmit)="registerUser(userForm_3)" #userForm_3='ngForm'>
+      <label>
+        <select
+          name="city"
+          [ngModel]="cities[0].value"
         >
-          submit
-        </button>
-      </form>
-    </section>
-    <section>
-      <h3>[TD] Setting default values</h3>
-      <form (ngSubmit)="registerUser(userForm_3)" #userForm_3='ngForm'>
+          <option
+            *ngFor="let city of cities"
+            value="{{city.value}}">
+            {{city.name}}
+          </option>
+        </select>
+      </label>
+      <div
+        *ngFor="let accType of accountTypes"
+        class="radio">
         <label>
-          <select
-            name="city"
-            [ngModel]="cities[0].value"
+          <input
+            type="radio"
+            name="account-type"
+            [value]="accType.value"
+            [ngModel]="accountTypes[0].value"
           >
-            <option
-              *ngFor="let city of cities"
-              value="{{city.value}}">
-              {{city.name}}
-            </option>
-          </select>
+          {{accType.title}}
         </label>
-        <div
-          *ngFor="let accType of accountTypes"
-          class="radio">
-          <label>
-            <input
-              type="radio"
-              name="account-type"
-              [value]="accType.value"
-              [ngModel]="accountTypes[0].value"
-            >
-            {{accType.title}}
-          </label>
-        </div>
-        <button
-          type="submit"
-          class="button-submit"
+      </div>
+      <button
+        type="submit"
+        class="button-submit"
+      >
+        submit
+      </button>
+    </form>
+  </section>
+  <section>
+    <h3>[TD] Reset after submit</h3>
+    <form (ngSubmit)="registerUser(userForm_4)" #userForm_4='ngForm'>
+      <label>
+        <input name="name" placeholder="enter name" ngModel>
+      </label>
+      <label>
+        <input name="age" placeholder="enter age" ngModel>
+      </label>
+      <label>
+        <select
+          name="city"
+          [ngModel]="cities[0].value"
         >
-          submit
-        </button>
-      </form>
-    </section>
-    <section>
-      <h3>[TD] Reset after submit</h3>
-      <form (ngSubmit)="registerUser(userForm_4)" #userForm_4='ngForm'>
+          <option
+            *ngFor="let city of cities"
+            value="{{city.value}}">
+            {{city.name}}
+          </option>
+        </select>
+      </label>
+      <div
+        *ngFor="let accType of accountTypes"
+        class="radio">
         <label>
-          <input name="name" placeholder="enter name" ngModel>
-        </label>
-        <label>
-          <input name="age" placeholder="enter age" ngModel>
-        </label>
-        <label>
-          <select
-            name="city"
-            [ngModel]="cities[0].value"
+          <input
+            type="radio"
+            name="account-type"
+            [value]="accType.value"
+            [ngModel]="accountTypes[0].value"
           >
-            <option
-              *ngFor="let city of cities"
-              value="{{city.value}}">
-              {{city.name}}
-            </option>
-          </select>
+          {{accType.title}}
         </label>
-        <div
-          *ngFor="let accType of accountTypes"
-          class="radio">
-          <label>
-            <input
-              type="radio"
-              name="account-type"
-              [value]="accType.value"
-              [ngModel]="accountTypes[0].value"
-            >
-            {{accType.title}}
-          </label>
-        </div>
-        <button type="submit" class="button-submit">submit</button>
-      </form>
-    </section>
-    <section>
-      <h3>[TD] Patch value</h3>
-      <form (ngSubmit)="registerUser(null)" #userForm_5='ngForm'>
-        <label>
-          <input name="name" placeholder="enter name" ngModel>
-        </label>
-        <label>
-          <input name="age" placeholder="enter age" ngModel>
-        </label>
-        <button
-          type="button"
-          class="button-submit"
-          (click)="onDoubleAgeClickHandler()"
+      </div>
+      <button type="submit" class="button-submit">submit</button>
+    </form>
+  </section>
+  <section>
+    <h3>[TD] Patch value</h3>
+    <form (ngSubmit)="registerUser(null)" #userForm_5='ngForm'>
+      <label>
+        <input name="name" placeholder="enter name" ngModel>
+      </label>
+      <label>
+        <input name="age" placeholder="enter age" ngModel>
+      </label>
+      <button
+        type="button"
+        class="button-submit"
+        (click)="onDoubleAgeClickHandler()"
+      >
+        double age
+      </button>
+      <label>
+        <select
+          name="city"
+          [ngModel]="cities[0].value"
         >
-          double age
-        </button>
+          <option
+            *ngFor="let city of cities"
+            value="{{city.value}}">
+            {{city.name}}
+          </option>
+        </select>
+      </label>
+      <div
+        *ngFor="let accType of accountTypes"
+        class="radio">
         <label>
-          <select
-            name="city"
-            [ngModel]="cities[0].value"
+          <input
+            type="radio"
+            name="account-type"
+            [value]="accType.value"
+            [ngModel]="accountTypes[0].value"
           >
-            <option
-              *ngFor="let city of cities"
-              value="{{city.value}}">
-              {{city.name}}
-            </option>
-          </select>
+          {{accType.title}}
         </label>
-        <div
-          *ngFor="let accType of accountTypes"
-          class="radio">
-          <label>
-            <input
-              type="radio"
-              name="account-type"
-              [value]="accType.value"
-              [ngModel]="accountTypes[0].value"
-            >
-            {{accType.title}}
-          </label>
-        </div>
-        <button type="submit" class="button-submit">submit</button>
-      </form>
-    </section>
-  </main>
+      </div>
+      <button type="submit" class="button-submit">submit</button>
+    </form>
+  </section>
 </div>

@@ -9,6 +9,7 @@ import {PipesComponent} from './components/pipes/pipes.component';
 import {FormsComponent} from './components/forms/forms.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
+import {RxjsComponent} from './components/rxjs/rxjs.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -59,6 +60,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.REGEXP,
     path: 'regexp',
     component: RegexpComponent
+  },
+  {
+    title: 'RxJs - примеры',
+    tag: RouteGroupTag.RXJS,
+    path: 'rxjs',
+    component: RxjsComponent
   }
 ];
 

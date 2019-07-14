@@ -1,18 +1,3 @@
-main, header {
-  width: 100%;
-}
-main {
-  padding: 0 20px 50px;
-}
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 20px 5px;
-  margin-bottom: 20px;
-  background-color: white;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0, 0.3);
-}
 section {
   width: 100%;
   border-radius: 4px;
@@ -51,10 +36,8 @@ section {
       &:focus {
         box-shadow: 0 0 3px 1px lightskyblue;
       }
-      &:focus.ng-invalid.ng-touched {
+      &.ng-invalid.ng-touched, &:focus.ng-invalid {
         box-shadow: 0 0 3px 0 crimson;
-      }
-      &.ng-invalid.ng-touched {
         border-color: scale_color(crimson,$lightness: 25%);
       }
     }
