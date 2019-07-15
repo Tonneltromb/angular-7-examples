@@ -17,6 +17,7 @@ import {FormsComponent} from './components/forms/forms.component';
 import {SvgArrowUpComponent} from '../../common/svg/svg.arrow-up.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
+import {OtherComponent} from './components/other/other.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {RxjsComponent} from './components/rxjs/rxjs.component';
     ArrayFilterPipe,
     SvgArrowUpComponent,
     RegexpComponent,
-    RxjsComponent
+    RxjsComponent,
+    OtherComponent
   ],
   imports: [
     CommonModule,

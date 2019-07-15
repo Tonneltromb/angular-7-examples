@@ -10,6 +10,7 @@ import {FormsComponent} from './components/forms/forms.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
+import {OtherComponent} from './components/other/other.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -66,6 +67,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.RXJS,
     path: 'rxjs',
     component: RxjsComponent
+  },
+  {
+    title: 'Разное',
+    tag: RouteGroupTag.OTHER,
+    path: 'other',
+    component: OtherComponent
   }
 ];
 

@@ -5,6 +5,7 @@ export class RouteGroupTag {
   static FORMS = 'Работа с формами';
   static REGEXP = 'Регулярные выражения';
   static RXJS = 'Работа с библиотекой RxJs';
+  static  OTHER = 'Разное';
   static values = () => {
     return [
       RouteGroupTag.CHANGE_DETECTION,
@@ -13,6 +14,7 @@ export class RouteGroupTag {
       RouteGroupTag.FORMS,
       RouteGroupTag.REGEXP,
       RouteGroupTag.RXJS,
+      RouteGroupTag.OTHER,
     ];
   }
 }
