@@ -1,10 +1,5 @@
 <div class="container">
-  <section>
-    <h3>[TD] Form example
-      <div [ngStyle]="{width: '20px', height: '20px'}">
-        <app-svg-arrow-up></app-svg-arrow-up>
-      </div>
-    </h3>
+  <app-expand-block [title]="'[TD] Form example'">
     <form (ngSubmit)="registerUser(userForm_1)" #userForm_1='ngForm'>
       <label>
         <input name="name" placeholder="enter name" ngModel>
@@ -12,11 +7,10 @@
       <label>
         <input name="age" placeholder="enter age" ngModel>
       </label>
-      <button type="submit" class="button-submit">submit</button>
+      <button type="submit" class="button button-submit">submit</button>
     </form>
-  </section>
-  <section>
-    <h3>[TD] Form validation (simple)</h3>
+  </app-expand-block>
+  <app-expand-block [title]="'[TD] Form validation (simple)'">
     <form (ngSubmit)="registerUser(userForm_2)" #userForm_2='ngForm'>
       <label>
         <input
@@ -48,15 +42,14 @@
       </label>
       <button
         type="submit"
-        class="button-submit"
+        class="button button-submit"
         [disabled]="!userForm_2.valid"
       >
         submit
       </button>
     </form>
-  </section>
-  <section>
-    <h3>[TD] Setting default values</h3>
+  </app-expand-block>
+  <app-expand-block [title]="'[TD] Setting default values'">
     <form (ngSubmit)="registerUser(userForm_3)" #userForm_3='ngForm'>
       <label>
         <select
@@ -85,14 +78,13 @@
       </div>
       <button
         type="submit"
-        class="button-submit"
+        class="button button-submit"
       >
         submit
       </button>
     </form>
-  </section>
-  <section>
-    <h3>[TD] Reset after submit</h3>
+  </app-expand-block>
+  <app-expand-block [title]="'[TD] Reset after submit'">
     <form (ngSubmit)="registerUser(userForm_4)" #userForm_4='ngForm'>
       <label>
         <input name="name" placeholder="enter name" ngModel>
@@ -125,11 +117,10 @@
           {{accType.title}}
         </label>
       </div>
-      <button type="submit" class="button-submit">submit</button>
+      <button type="submit" class="button button-submit">submit</button>
     </form>
-  </section>
-  <section>
-    <h3>[TD] Patch value</h3>
+  </app-expand-block>
+  <app-expand-block [title]="'[TD] Patch value'">
     <form (ngSubmit)="registerUser(null)" #userForm_5='ngForm'>
       <label>
         <input name="name" placeholder="enter name" ngModel>
@@ -139,7 +130,7 @@
       </label>
       <button
         type="button"
-        class="button-submit"
+        class="button button-submit"
         (click)="onDoubleAgeClickHandler()"
       >
         double age
@@ -169,7 +160,7 @@
           {{accType.title}}
         </label>
       </div>
-      <button type="submit" class="button-submit">submit</button>
+      <button type="submit" class="button button-submit">submit</button>
     </form>
-  </section>
+  </app-expand-block>
 </div>

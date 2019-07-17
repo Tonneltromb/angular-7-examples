@@ -1,0 +1,6 @@
+<div class="container">
+  <app-expand-block [title]="'Пример взаимодействия родительского и дочернего компонентов'">
+    <app-item-cc *ngFor="let item of items;let i = index"
+                 [item]="item" (itemChangeEvent)="onItemChange($event, i)"></app-item-cc>
+  </app-expand-block>
+</div>

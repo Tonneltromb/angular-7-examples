@@ -1,6 +1,5 @@
 <div class="container">
-  <section>
-    <h3>ng-template example</h3>
+  <app-expand-block [title]="'ng-template example'">
     <div [ngStyle]="{display: 'flex', padding: '10px'}">
       <button class="button" (click)="onShowColorsClickHandler()">show colors</button>
       <ng-template [ngIf]="showColors">
@@ -15,9 +14,8 @@
         </ul>
       </ng-template>
     </div>
-  </section>
-  <section>
-    <h3>ng-container example</h3>
+  </app-expand-block>
+  <app-expand-block [title]="'ng-container example'">
     <div [ngStyle]="{display: 'flex', padding: '10px'}">
       <button class="button" (click)="onShowColorsClickHandler()">show colors</button>
       <ng-container *ngIf="showColors">
@@ -32,5 +30,5 @@
         </ul>
       </ng-container>
     </div>
-  </section>
+  </app-expand-block>
 </div>

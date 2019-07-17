@@ -11,6 +11,7 @@ import {RegexpComponent} from './components/regex/regexp.component';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
 import {OtherComponent} from './components/other/other.component';
+import {ItemsHolderComponent} from './components/components-communication/items-holder/items-holder.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -73,6 +74,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.OTHER,
     path: 'other',
     component: OtherComponent
+  },
+  {
+    title: 'Взаимодействие компонентов',
+    tag: RouteGroupTag.OTHER,
+    path: 'componentsCommunication',
+    component: ItemsHolderComponent
   }
 ];
 

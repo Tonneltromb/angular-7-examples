@@ -1,0 +1,14 @@
+<section class="expand-block">
+  <header>
+    <h3>{{title}}</h3>
+    <button (click)="onExpandButtonClickHandler()">
+      <app-svg-arrow-up fill="crimson" *ngIf="expand;else down"></app-svg-arrow-up>
+      <ng-template #down>
+        <app-svg-arrow-down fill="crimson"></app-svg-arrow-down>
+      </ng-template>
+    </button>
+  </header>
+  <main *ngIf="expand">
+    <ng-content></ng-content>
+  </main>
+</section>

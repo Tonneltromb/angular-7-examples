@@ -1,25 +1,4 @@
-section {
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-
-  h3 {
-    padding: 10px;
-    background-color: lightskyblue;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .info {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
-  }
-
+.expand-block main {
   form {
     width: 100%;
     padding: 10px;
@@ -32,50 +11,43 @@ section {
       font-size: 1.3em;
       padding: 5px 10px;
       border-radius: 4px;
-      border: 1px solid rgba(0,0,0,0.2);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+
       &:focus {
         box-shadow: 0 0 3px 1px lightskyblue;
       }
+
       &.ng-invalid.ng-touched, &:focus.ng-invalid {
         box-shadow: 0 0 3px 0 crimson;
-        border-color: scale_color(crimson,$lightness: 25%);
+        border-color: scale_color(crimson, $lightness: 25%);
       }
     }
+
     .radio {
       margin-top: 10px;
+
       input {
         margin: 0;
         padding: 0;
         width: auto;
+
         &:focus {
           box-shadow: none;
         }
       }
     }
+
     .button-submit {
-      width: fit-content;
-      border: none;
-      background-color: scale_color(lightskyblue, $lightness: -25%);
-      padding: 5px 15px;
-      border-radius: 4px;
-      margin-top: 5px;
       font-size: 1.2em;
       font-weight: bold;
-      cursor: pointer;
-      &:active {
-        background-color: scale_color(lightskyblue, $lightness: -45%);
-        transition: background-color ease-out 200ms;
-      }
-      &:disabled {
-        background-color: scale_color(lightskyblue, $lightness: 25%);
-        color: rgba(0, 0, 0, 0.3);
-        cursor: not-allowed;
-      }
+      margin-top: 10px;
+      align-self: flex-end;
     }
+
     .error-message {
       display: block;
-      border: 1px solid scale_color(crimson,$lightness: 25%);
-      background-color: scale_color(crimson,$lightness: 75%);
+      border: 1px solid scale_color(crimson, $lightness: 25%);
+      background-color: scale_color(crimson, $lightness: 75%);
       border-radius: 5px;
       padding: 10px;
       margin-top: 5px;

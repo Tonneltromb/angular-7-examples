@@ -1,0 +1,9 @@
+<div class="item">
+  <h4>{{item.title}}</h4>
+  <span>{{item.count}}</span>
+  <span>{{item.description}}</span>
+  <label>
+    <input type="text" [value]="item.title" #titleInput>
+  </label>
+  <button class="button" (click)="onNameChangeClickHandler()">change name</button>
+</div>

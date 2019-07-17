@@ -14,10 +14,14 @@ import {ExamplesComponent} from './examples.component';
 import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {FormsComponent} from './components/forms/forms.component';
-import {SvgArrowUpComponent} from '../../common/svg/svg.arrow-up.component';
+import {SvgArrowUpComponent} from '../../common/svg/svg-arrow-up.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
 import {OtherComponent} from './components/other/other.component';
+import {ItemsHolderComponent} from './components/components-communication/items-holder/items-holder.component';
+import {ItemComponent} from './components/components-communication/item/item.component';
+import {ExpandBlockComponent} from '../../common/components/expand-block/expand-block.component';
+import {SvgArrowDownComponent} from '../../common/svg/svg-arrow-down.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +35,14 @@ import {OtherComponent} from './components/other/other.component';
     PipesComponent,
     FormsComponent,
     ArrayFilterPipe,
-    SvgArrowUpComponent,
     RegexpComponent,
     RxjsComponent,
-    OtherComponent
+    OtherComponent,
+    ItemsHolderComponent,
+    ItemComponent,
+    SvgArrowUpComponent,
+    SvgArrowDownComponent,
+    ExpandBlockComponent
   ],
   imports: [
     CommonModule,
