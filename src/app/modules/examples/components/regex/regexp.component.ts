@@ -3,7 +3,6 @@ import {FormControl} from '@angular/forms';
 
 @Component({
   templateUrl: './regex.component.html',
-  styleUrls: ['./regex.component.scss', '../forms/forms.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class RegexpComponent {

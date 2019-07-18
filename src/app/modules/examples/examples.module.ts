@@ -13,7 +13,7 @@ import {UserStore} from './components/change-detection/store/user.store';
 import {ExamplesComponent} from './examples.component';
 import {ArrayFilterPipe} from './core/pipes/ArrayFilterPipe';
 import {PipesComponent} from './components/pipes/pipes.component';
-import {FormsComponent} from './components/forms/forms.component';
+import {TemplateDrivenFormsComponent} from './components/forms/template-driven/template-driven-forms.component';
 import {SvgArrowUpComponent} from '../../common/svg/svg-arrow-up.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
@@ -22,6 +22,7 @@ import {ItemsHolderComponent} from './components/components-communication/items-
 import {ItemComponent} from './components/components-communication/item/item.component';
 import {ExpandBlockComponent} from '../../common/components/expand-block/expand-block.component';
 import {SvgArrowDownComponent} from '../../common/svg/svg-arrow-down.component';
+import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {SvgArrowDownComponent} from '../../common/svg/svg-arrow-down.component';
     UserComponent,
     UserListComponent,
     PipesComponent,
-    FormsComponent,
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent,
     ArrayFilterPipe,
     RegexpComponent,
     RxjsComponent,

@@ -6,12 +6,13 @@ import {ITVDNChangeDetection01Component} from './components/itvdn-change-detecti
 import {ChangeDetectionComponent} from './components/change-detection/change-detection.component';
 import {RouteGroupTag} from './core/RouteGroupTag';
 import {PipesComponent} from './components/pipes/pipes.component';
-import {FormsComponent} from './components/forms/forms.component';
+import {TemplateDrivenFormsComponent} from './components/forms/template-driven/template-driven-forms.component';
 import {RegexpComponent} from './components/regex/regexp.component';
 import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
 import {OtherComponent} from './components/other/other.component';
 import {ItemsHolderComponent} from './components/components-communication/items-holder/items-holder.component';
+import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -54,8 +55,14 @@ export const CHILDREN: ExamplesRoute[] = [
   {
     title: 'Forms',
     tag: RouteGroupTag.FORMS,
-    path: 'forms',
-    component: FormsComponent
+    path: 'forms/td',
+    component: TemplateDrivenFormsComponent
+  },
+  {
+    title: 'Reactive Forms',
+    tag: RouteGroupTag.FORMS,
+    path: 'forms/reactive',
+    component: ReactiveFormsComponent
   },
   {
     title: 'Regexp',
@@ -84,7 +91,8 @@ export const CHILDREN: ExamplesRoute[] = [
 ];
 
 const examplesRoutes: Routes = [
-  {path: '', component: ExamplesComponent, children: CHILDREN}
+  {path: '', component: ExamplesComponent, children: CHILDREN},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({

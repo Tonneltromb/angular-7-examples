@@ -2,11 +2,10 @@ import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss'],
+  templateUrl: './template-driven-forms.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class FormsComponent {
+export class TemplateDrivenFormsComponent {
   @ViewChild('userForm_5') patchedUserForm: NgForm;
   public cities: Array<{ name: string, value: string; }> = [
     {name: 'Moscow', value: 'msc'},
