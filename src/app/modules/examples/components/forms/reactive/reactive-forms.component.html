@@ -1,6 +1,66 @@
 <div class="container">
   <app-expand-block [title]="'[R] simple example'">
-    <form [formGroup]="carCreateFormGroup" (ngSubmit)="onCreateCarFormSubmit()">
+    <form [formGroup]="carCreateForm1" (ngSubmit)="onCreateCarForm1Submit()">
+      <label>
+        <input type="text"
+               [formControlName]="carFormControl.MARK"
+               placeholder="enter mark"
+        />
+      </label>
+      <label>
+        <input type="text"
+               [formControlName]="carFormControl.MODEL"
+               placeholder="enter model"
+        />
+      </label>
+      <label>
+        <input type="number"
+               [formControlName]="carFormControl.SPEED"
+               placeholder="enter speed"
+        />
+      </label>
+      <label>
+        <select [formControlName]="carFormControl.COLOR">
+          <option *ngFor="let color of carColors" value="{{color}}">
+            {{color}}
+          </option>
+        </select>
+      </label>
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </app-expand-block>
+  <app-expand-block [title]="'[R] created by FormBuilder'">
+    <form [formGroup]="carCreateForm2" (ngSubmit)="onCreateCarForm2Submit()">
+      <label>
+        <input type="text"
+               [formControlName]="carFormControl.MARK"
+               placeholder="enter mark"
+        />
+      </label>
+      <label>
+        <input type="text"
+               [formControlName]="carFormControl.MODEL"
+               placeholder="enter model"
+        />
+      </label>
+      <label>
+        <input type="number"
+               [formControlName]="carFormControl.SPEED"
+               placeholder="enter speed"
+        />
+      </label>
+      <label>
+        <select [formControlName]="carFormControl.COLOR">
+          <option *ngFor="let color of carColors" value="{{color}}">
+            {{color}}
+          </option>
+        </select>
+      </label>
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </app-expand-block>
+  <app-expand-block [title]="'[R] validation'">
+    <form [formGroup]="carCreateForm3" (ngSubmit)="onCreateCarForm3Submit()">
       <label>
         <input type="text"
                [formControlName]="carFormControl.MARK"

@@ -58,7 +58,7 @@ app-expand-block {
           box-shadow: 0 0 3px 1px lightskyblue;
         }
 
-        &.ng-invalid.ng-touched, &:focus.ng-invalid {
+        &.ng-invalid.ng-touched, &:focus:not(.ng-pristine).ng-invalid {
           box-shadow: 0 0 3px 0 crimson;
           border-color: scale_color(crimson, $lightness: 25%);
         }
