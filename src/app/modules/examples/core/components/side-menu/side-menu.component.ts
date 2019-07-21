@@ -1,7 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 import {CHILDREN} from '../../../examples-routing.module';
-import {Router} from '@angular/router';
 import {RouteGroupTag} from '../../RouteGroupTag';
 import ExamplesRoute from '../../interfaces/ExamplesRoute';
 
@@ -14,10 +13,6 @@ import ExamplesRoute from '../../interfaces/ExamplesRoute';
 export class SideMenuComponent {
   navItems: ExamplesRoute[] = CHILDREN;
   routeTags: RouteGroupTag[] = RouteGroupTag.values();
-  constructor(private router: Router) {}
-  onBackToMainPageClickHandler() {
-    this.router.navigate(['/']);
-  }
   filterItemsCallback(item: ExamplesRoute, group: RouteGroupTag) {
     return item.tag === group;
   }
