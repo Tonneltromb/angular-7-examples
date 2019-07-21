@@ -9,7 +9,7 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 
 export class ExpandBlockComponent {
   @Input() title: string;
-  expand = true;
+  expand = false;
 
   onExpandButtonClickHandler() {
     this.expand = !this.expand;

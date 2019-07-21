@@ -99,7 +99,7 @@
     </form>
   </app-expand-block>
   <app-expand-block [title]="'[TD] Patch value'">
-    <form (ngSubmit)="registerUser(null)" #userForm_5='ngForm'>
+    <form (ngSubmit)="registerUser(userForm_5)" #userForm_5='ngForm'>
       <label>
         <input name="name" placeholder="enter name" ngModel>
       </label>
