@@ -13,6 +13,7 @@ import {RxjsComponent} from './components/rxjs/rxjs.component';
 import {OtherComponent} from './components/other/other.component';
 import {ItemsHolderComponent} from './components/components-communication/items-holder/items-holder.component';
 import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms.component';
+import {StructuralDirectivesComponent} from './components/directives/structural/structural-directives.component';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -45,6 +46,12 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.SERVICES_AND_DI,
     path: 'services',
     loadChildren: './modules/services/services.module#ServicesModule'
+  },
+  {
+    title: 'Структурные директивы',
+    tag: RouteGroupTag.DIRECTIVES,
+    path: 'directives/structural',
+    component: StructuralDirectivesComponent
   },
   {
     title: 'Pipes',
@@ -87,7 +94,7 @@ export const CHILDREN: ExamplesRoute[] = [
     tag: RouteGroupTag.OTHER,
     path: 'componentsCommunication',
     component: ItemsHolderComponent
-  }
+  },
 ];
 
 const examplesRoutes: Routes = [

@@ -23,9 +23,11 @@ import {ItemComponent} from './components/components-communication/item/item.com
 import {ExpandBlockComponent} from '../../common/components/expand-block/expand-block.component';
 import {SvgArrowDownComponent} from '../../common/svg/svg-arrow-down.component';
 import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms.component';
+import {StructuralDirectivesComponent} from './components/directives/structural/structural-directives.component';
 
 @NgModule({
   declarations: [
+    ExpandBlockComponent,
     ExamplesComponent,
     SideMenuComponent,
     ITVDNChangeDetection01Component,
@@ -44,7 +46,7 @@ import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms
     ItemComponent,
     SvgArrowUpComponent,
     SvgArrowDownComponent,
-    ExpandBlockComponent
+    StructuralDirectivesComponent
   ],
   imports: [
     CommonModule,

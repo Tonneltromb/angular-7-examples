@@ -5,11 +5,13 @@ export class RouteGroupTag {
   static FORMS = 'Работа с формами';
   static REGEXP = 'Регулярные выражения';
   static RXJS = 'Работа с библиотекой RxJs';
-  static  OTHER = 'Разное';
+  static DIRECTIVES = 'Директивы';
+  static OTHER = 'Разное';
   static values = () => {
     return [
       RouteGroupTag.CHANGE_DETECTION,
       RouteGroupTag.SERVICES_AND_DI,
+      RouteGroupTag.DIRECTIVES,
       RouteGroupTag.PIPES,
       RouteGroupTag.FORMS,
       RouteGroupTag.REGEXP,

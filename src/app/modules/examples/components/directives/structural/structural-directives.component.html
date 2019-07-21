@@ -1,0 +1,46 @@
+<div class="container">
+  <app-expand-block [title]="'ngIf'">
+    <ng-template [ngIf]="showHeaderWithGreenColor">
+      <h1 [ngStyle]="{color: 'green'}">header with green color</h1>
+    </ng-template>
+    <button class="button"
+            (click)="onShowHeaderWithGreenColorButtonClickHandler()"
+    >
+      {{showHeaderWithGreenColor ? 'Hide' : 'Show'}} header with green color
+    </button>
+  </app-expand-block>
+  <app-expand-block [title]="'ngIf else'">
+    <ng-template [ngIf]="showHeaderWithRedColor"
+                 [ngIfElse]="headerWithBlueColor"
+    >
+      <h1 [ngStyle]="{color: 'red'}">header with red color</h1>
+    </ng-template>
+    <ng-template #headerWithBlueColor>
+      <h1 [ngStyle]="{color: 'blue'}">header with blue color</h1>
+    </ng-template>
+    <button class="button"
+            (click)="onShowHeaderWithRedColorButtonClickHandler()"
+    >
+      Show header with {{showHeaderWithRedColor ? 'blue' : 'red'}} color
+    </button>
+  </app-expand-block>
+  <app-expand-block [title]="'ngIf then else'">
+<!--    <div *ngIf="showHeaderWithYellowColor; then headerWithYellowColor else headerWithBrownColor">ignored content</div>-->
+    <ng-template [ngIf]="showHeaderWithYellowColor"
+                 [ngIfThen]="headerWithYellowColor"
+                 [ngIfElse]="headerWithBrownColor"
+    >
+    </ng-template>
+    <ng-template #headerWithYellowColor>
+      <h1 [ngStyle]="{color: 'yellow'}">header with yellow color</h1>
+    </ng-template>
+    <ng-template #headerWithBrownColor>
+      <h1 [ngStyle]="{color: 'brown'}">header with brown color</h1>
+    </ng-template>
+    <button class="button"
+            (click)="onShowHeaderWithYellowColorButtonClickHandler()"
+    >
+      Show header with {{showHeaderWithYellowColor ? 'brown' : 'yellow'}} color
+    </button>
+  </app-expand-block>
+</div>
