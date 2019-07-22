@@ -1,0 +1,8 @@
+<div class="container">
+  <a href=""
+     *ngFor="let bird of birdsService.BIRDS"
+     [routerLink]="[bird.id]"
+  >
+    {{bird.name}}
+  </a>
+</div>

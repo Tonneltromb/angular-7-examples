@@ -6,10 +6,12 @@ export class RouteGroupTag {
   static REGEXP = 'Регулярные выражения';
   static RXJS = 'Работа с библиотекой RxJs';
   static DIRECTIVES = 'Директивы';
+  static ROUTING = 'Маршрутизация';
   static OTHER = 'Разное';
   static values = () => {
     return [
       RouteGroupTag.CHANGE_DETECTION,
+      RouteGroupTag.ROUTING,
       RouteGroupTag.SERVICES_AND_DI,
       RouteGroupTag.DIRECTIVES,
       RouteGroupTag.PIPES,

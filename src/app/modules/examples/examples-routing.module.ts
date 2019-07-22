@@ -8,12 +8,12 @@ import {RouteGroupTag} from './core/RouteGroupTag';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {TemplateDrivenFormsComponent} from './components/forms/template-driven/template-driven-forms.component';
 import {RegexpComponent} from './components/regex/regexp.component';
-import ExamplesRoute from './core/interfaces/ExamplesRoute';
 import {RxjsComponent} from './components/rxjs/rxjs.component';
 import {OtherComponent} from './components/other/other.component';
 import {ItemsHolderComponent} from './components/components-communication/items-holder/items-holder.component';
 import {ReactiveFormsComponent} from './components/forms/reactive/reactive-forms.component';
 import {StructuralDirectivesComponent} from './components/directives/structural/structural-directives.component';
+import ExamplesRoute from './core/interfaces/ExamplesRoute';
 
 export const CHILDREN: ExamplesRoute[] = [
   {
@@ -95,6 +95,12 @@ export const CHILDREN: ExamplesRoute[] = [
     path: 'componentsCommunication',
     component: ItemsHolderComponent
   },
+  {
+    title: 'Routing examples',
+    tag: RouteGroupTag.ROUTING,
+    path: 'routing',
+    loadChildren: './modules/routing/routing-examples.module#RoutingExamplesModule'
+  }
 ];
 
 const examplesRoutes: Routes = [
