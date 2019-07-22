@@ -60,12 +60,16 @@
     </form>
   </app-expand-block>
   <app-expand-block [title]="'[R] validation'">
+    <div class="info">
+      Помимо стандартных валидаторов, был добавлен кастомный валидатор: при вводе марки автомобиля <i>bugatti</i>, должна быть указана скорость не меньше 170
+    </div>
     <form [formGroup]="carCreateForm3" (ngSubmit)="onCreateCarForm3Submit()">
       <label>
         <input type="text"
                [formControlName]="carFormControl.MARK"
                placeholder="enter mark"
         />
+        <!-- todo create component(maybe components for concrete errors) rendering errors -->
       </label>
       <label>
         <input type="text"
@@ -74,7 +78,7 @@
         />
       </label>
       <label>
-        <input type="number"
+        <input type="text"
                [formControlName]="carFormControl.SPEED"
                placeholder="enter speed"
         />
@@ -86,7 +90,7 @@
           </option>
         </select>
       </label>
-      <button type="submit" class="button">Submit</button>
+      <button type="submit" class="button" [disabled]="carCreateForm3.invalid">Submit</button>
     </form>
   </app-expand-block>
 </div>
